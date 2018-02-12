@@ -1,0 +1,29 @@
+Unit Type
+Name | MaxHP|AC|Hit Modifier|Damage Dice|Damage Dice Num|Damage Modifier|Number of attacks|Range|Movement
+Soldier 11 16 3 6 1 1 1 80 30
+Werewolf 58 12 4 8 1 2 3 5 30
+Renault 180 20 9 8 5 7 2 5 30
+#
+Faction 1
+Name|State (Attacking/Defending)
+DuskGuard Defending
+#
+Faction 1 Troop Placement
+troop type|troop number
+Soldier 60
+#
+Faction 2
+Name|State (Attacking/Defending)
+BloodyFangs Attacking
+#
+Faction 2 Troop Placement
+troop type|troop number
+Werewolf 20
+#
+Map scale
+X|Y|troop length
+22 60 20
+#
+Map terrain Placement
+terrain type(open/difficult/restricted) |start x coord|start y coord|end x coord|end y coord
+difficult 0 10 21 19
