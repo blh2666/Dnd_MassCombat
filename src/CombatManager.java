@@ -1,5 +1,7 @@
 import java.util.*;
 
+import static com.sun.org.apache.xalan.internal.lib.ExsltStrings.split;
+
 public class CombatManager {
     private ArrayList<Unit> units;
     private Map map;
@@ -124,8 +126,22 @@ public class CombatManager {
             removeDeadCombatants();
             System.out.println("Battlefield overview");
             System.out.println(map.toString());
-            System.out.println("round "+String.valueOf(round)+" has concluded, input anything to continue");
-            Reader.next();
+            boolean commands = true;
+            while (commands) {
+                System.out.println("round " + String.valueOf(round) + " has concluded, input commands or invalid command to continue");
+                String input = Reader.nextLine();
+
+                commands = false;
+
+                if (input.charAt(0)=='a' && input.length() > 3){
+
+                    String[] values = input.split(" ");
+                    int faction = Integer.valueOf(input.charAt(1)-49);
+                    factions.get(faction).damageUnit(Integer.valueOf(values[1]));
+                    commands = true;
+                }
+
+            }
             round++;
 
 

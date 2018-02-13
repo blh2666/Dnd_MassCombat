@@ -35,4 +35,15 @@ public class Faction {
     public ArrayList<Unit> getUnits() {
         return units;
     }
+
+    public void damageUnit(int damage){
+
+        for (Unit unit:
+             units) {
+            if (unit.getState() != Unit.State.Dead){
+                System.out.println(unit.takeDamage(damage));
+                break;
+            }
+        }
+    }
 }

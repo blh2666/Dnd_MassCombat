@@ -74,7 +74,7 @@ public class Unit {
         return outcomes;
     }
 
-    public void takeDamage(int damage){
+    public String takeDamage(int damage){
         currHP -= damage;
 
         if (currHP < 0){
@@ -83,6 +83,8 @@ public class Unit {
         else if (currHP < MaxHP*0.25){
             state = State.Fleeing;
         }*/
+
+        return this.name+" takes "+Integer.toString(damage)+" damage and is "+state;
 
     }
 
